@@ -1,12 +1,3 @@
-"""
-Test Driven Development
-Build My Own Test Framework
-
-1) Make sure the file is called **byotest** and remove the `number_of_evens` function and the call to the `test_are_equal` function at the end. 
-This should leave you with the remaining test functions that we'll import from here when we wish to write our tests later on
-
-"""
-
 def test_are_equal(actual, expected):
     """
     Test that two values are equal. Raises AssertionError if both values are
@@ -55,20 +46,4 @@ def test_between(upper_limit, lower_limit, actual):
     Check to ensure that a number is between two other numbers. Raises
     AssertionError if the number is not between the other two numbers
     """
-    assert lower_limit <= actual <= upper_limit, "{0} is not between {1} and {2}".format(actual, lower_limit, upper_limit)
-
-
-# Test to fail the `test_are_equal` function
-# test_are_equal(number_of_evens([1,2,3,4,5]), 2)
-
-# Test to fail the `test_not_equal` function
-# test_not_equal(0, 0)
-
-# Test to fail the `test_is_in` function
-# test_is_in([1], 2)
-
-# Test to fail the `test_not_in` function
-# test_not_in([1], 1)
-
-# Test to fail the `test_between` function
-test_between(10, 1, 200)
+assert lower_limit <= actual <= upper_limit, "{0} is not between {1} and {2}".format(actual, lower_limit, upper_limit)
